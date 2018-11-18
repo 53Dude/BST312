@@ -52,11 +52,70 @@ int main(int argc, const char * argv[]) {
     
     cout << "Remove items " << endl;
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
-    s = "tree";
+    s = "f";
     bst.deleteItem(s);
     print(bst.postOrderTraversal());
     cout << endl;
     cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
+    cout << endl;
+    
+    BST_312<int> bstI;
+    
+    for(int i=0;i<10;i++){
+        bstI.insertItem(i);
+    }
+    
+    cout << "2: postorder traversal is " << endl;
+    print(bstI.postOrderTraversal());
+    cout << endl;
+    
+    cout << "2: preorder traversal is " << endl;
+    print(bstI.preOrderTraversal());
+    cout << endl;
+    
+    cout << "2: inorder traversal is " << endl;
+    print(bstI.inOrderTraversal());
+    cout << endl;
+    
+    cout << "Remove items " << endl;
+    cout << "number of nodes in tree before delete is " << bstI.countNodes() << endl;
+    bstI.deleteItem(3);
+    print(bstI.postOrderTraversal());
+    cout << endl;
+    cout << "number of nodes in tree after delete is " << bstI.countNodes() << endl;
+    cout << endl;
+    
+    BST_312<char> bstC;
+    
+    char input[] = {'f', 'a', 'c', 'b', 'd', 'e', 'g', 'i', 'h', 'j', 'k'};
+    
+    for(int i=0;i<11;i++){
+        bstC.insertItem(input[i]);
+    }
+    
+    cout << "3: postorder traversal is " << endl;
+    print(bstC.postOrderTraversal());
+    cout << endl;
+    
+    cout << "3: preorder traversal is " << endl;
+    print(bstC.preOrderTraversal());
+    cout << endl;
+    
+    cout << "3: inorder traversal is " << endl;
+    print(bstC.inOrderTraversal());
+    cout << endl;
+    
+    cout << "Remove items " << endl;
+    cout << "number of nodes in tree before delete is " << bstC.countNodes() << endl;
+    bstC.deleteItem('f');
+    print(bstC.postOrderTraversal());
+    cout << endl;
+    cout << "number of nodes in tree after delete is " << bstC.countNodes() << endl;
+    cout << endl;
+    
+    bstC.makeEmpty();
+    cout << endl;
+    cout << "number of nodes in tree after empty is " << bstC.countNodes() << endl;
     cout << endl;
     
     std::cout << "Hello, World!\n";
